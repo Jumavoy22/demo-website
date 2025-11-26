@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo Project Showcase -ЧАТ БОТ</title>
+    <title>Demo Project Showcase - Витрина Проекта</title>
     <!-- Подключение Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -59,7 +59,7 @@
 <body class="p-4 md:p-8">
 
     <header class="text-center mb-12">
-        <h1 class="text-5xl font-extrabold text-gray-900 mb-2 tracking-tight">ЧАТ БОТ</h1>
+        <h1 class="text-5xl font-extrabold text-gray-900 mb-2 tracking-tight">Интерактивная Витрина Проекта</h1>
         <p class="text-xl text-gray-600">Наш подход к решению актуальной задачи.</p>
     </header>
 
@@ -71,28 +71,27 @@
             <!-- Секция: Проблема (Задержка 0ms) -->
             <section id="problem" class="card p-6 rounded-xl border-l-4 color-problem shadow-lg mx-auto" data-delay="0">
                 <h2 class="text-2xl font-bold mb-3 text-red-800">1. Проблема</h2>
-                <p class="text-gray-700 leading-relaxed">
-                   Микробизнесы ежедневно сталкиваются с огромным количеством бумажной работы, которая отнимает драгоценное время и ресурсы:
+                <!-- ОБНОВЛЕННЫЙ ТЕКСТ ПРОБЛЕМЫ -->
+                <div class="text-gray-700 leading-relaxed space-y-4">
+                    <p class="font-semibold">Микробизнесы ежедневно сталкиваются с огромным количеством бумажной работы, которая отнимает драгоценное время и ресурсы:</p>
+                    <ul class="list-disc list-inside space-y-2 pl-4">
+                        <li>**Генерация и проверка договоров:** владельцы бизнеса тратят часы на создание типовых договоров, часто с ошибками или несоответствиями.</li>
+                        <li>**Заполнение шаблонов:** реквизиты, суммы, сроки нужно вставлять вручную, что увеличивает риск ошибок.</li>
+                        <li>**Хранение и поиск документов:** документы теряются, сложно отслеживать историю изменений.</li>
+                        <li>**Форматы и экспорт:** необходимость вручную формировать PDF, Excel, Word для клиентов и партнёров.</li>
+                    </ul>
 
-Генерация и проверка договоров: владельцы бизнеса тратят часы на создание типовых договоров, часто с ошибками или несоответствиями.
-
-Заполнение шаблонов: реквизиты, суммы, сроки нужно вставлять вручную, что увеличивает риск ошибок.
-
-Хранение и поиск документов: документы теряются, сложно отслеживать историю изменений.
-
-Форматы и экспорт: необходимость вручную формировать PDF, Excel, Word для клиентов и партнёров.
-
-Последствия:
-
-Потеря времени и продуктивности.
-
-Ошибки в документах → финансовые и юридические риски.
-
-Сложности с управлением и отслеживанием документооборота.
-
-Вывод:
-Малый бизнес нуждается в умном инструменте, который автоматизирует большую часть бюрократии, уменьшает ошибки и позволяет предпринимателям сосредоточиться на развитии бизнеса.
-                </p>
+                    <p class="font-semibold text-red-700">Последствия:</p>
+                    <ul class="list-disc list-inside space-y-2 pl-4">
+                        <li>Потеря времени и продуктивности.</li>
+                        <li>Ошибки в документах → финансовые и юридические риски.</li>
+                        <li>Сложности с управлением и отслеживанием документооборота.</li>
+                    </ul>
+                    
+                    <p class="pt-2 italic text-sm border-t border-red-300">
+                        **Вывод:** Малый бизнес нуждается в умном инструменте, который автоматизирует большую часть бюрократии, уменьшает ошибки и позволяет предпринимателям сосредоточиться на развитии бизнеса.
+                    </p>
+                </div>
             </section>
         </div>
 
@@ -100,9 +99,24 @@
             <!-- Секция: Решение (Задержка 200ms) -->
             <section id="solution" class="card p-6 rounded-xl border-l-4 color-solution shadow-lg mx-auto" data-delay="200">
                 <h2 class="text-2xl font-bold mb-3 text-emerald-800">2. Решение</h2>
-                <p class="text-gray-700 leading-relaxed">
-                    Мы создаем AI-Driven Learning System (ADLS), которая динамически адаптирует контент, тесты и темп обучения в реальном времени, используя LLM для генерации индивидуальных учебных модулей и персонализированной обратной связи.
-                </p>
+                <!-- ОБНОВЛЕННЫЙ ТЕКСТ РЕШЕНИЯ -->
+                <div class="text-gray-700 leading-relaxed space-y-4">
+                    <p class="font-semibold">Мы создаём интерактивного Copilot-ассистента по документообороту — чат-бота, который автоматизирует большинство бюрократических задач для микробизнеса:</p>
+                    <ul class="list-disc list-inside space-y-2 pl-4">
+                        <li>**Генерация типовых договоров:** бот быстро создаёт договора на услуги, подряд, аренду, используя актуальные шаблоны.</li>
+                        <li>**Проверка документов:** автоматически выявляет ошибки, несоответствия и потенциальные риски.</li>
+                        <li>**Заполнение шаблонов:** реквизиты, суммы и сроки подставляются автоматически, экономя время.</li>
+                        <li>**Ведение истории документов:** все изменения сохраняются, легко отслеживать версию и статус.</li>
+                        <li>**Экспорт в PDF/Excel/Word:** документы готовы к отправке клиентам и партнёрам без дополнительной ручной работы.</li>
+                    </ul>
+
+                    <p class="font-semibold text-emerald-700">Преимущества решения:</p>
+                    <ul class="list-disc list-inside space-y-2 pl-4">
+                        <li>Сокращает время работы с документами до нескольких минут.</li>
+                        <li>Уменьшает количество ошибок и юридических рисков.</li>
+                        <li>Позволяет владельцам бизнеса сосредоточиться на развитии бизнеса, а не на бумажной рутине.</li>
+                    </ul>
+                </div>
             </section>
         </div>
 
@@ -110,11 +124,12 @@
             <!-- Секция: Команда (Задержка 400ms) -->
             <section id="team" class="card p-6 rounded-xl border-l-4 color-team shadow-lg mx-auto" data-delay="400">
                 <h2 class="text-2xl font-bold mb-3 text-indigo-800">3. Команда</h2>
+                <!-- ОБНОВЛЕННЫЙ СОСТАВ КОМАНДЫ -->
                 <ul class="space-y-3 text-sm text-gray-700">
-                    <li><strong class="font-semibold">Project Lead (Иван)</strong>: 10 лет в EdTech, Product Management.</li>
-                    <li><strong class="font-semibold">AI/ML Engineer (Анна)</strong>: Python, PyTorch, опыт работы с Gemini API и LLM-туннингом.</li>
-                    <li><strong class="font-semibold">Full-Stack Dev (Дмитрий)</strong>: React, Node.js, PostgreSQL. Стек: MERN.</li>
-                    <li><a href="#" class="text-indigo-600 hover:underline">Профиль Ивана (LinkedIn)</a></li>
+                    <li><strong class="font-semibold">Team Lead</strong>: Азизхон Ишанханов (Senior Backend Developer, EPAM).</li>
+                    <li><strong class="font-semibold">Full Stack Developer</strong>: Махмуд Хамдамов.</li>
+                    <!-- Удалил старые записи, оставив только предоставленные -->
+                    <!-- Вы можете добавить ссылки на LinkedIn или GitHub, если они будут предоставлены -->
                 </ul>
             </section>
         </div>
