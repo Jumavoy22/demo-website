@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo Project Showcase - Витрина Проекта</title>
+    <title>Demo Project Showcase -ЧАТ БОТ</title>
     <!-- Подключение Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -23,6 +23,15 @@
             will-change: transform;
             opacity: 0; /* Изначально скрыты для анимации появления */
             transform: translateY(20px);
+            /* Устанавливаем минимальную высоту, чтобы карточки не помещались на экране сразу */
+            min-height: 50vh; /* УВЕЛИЧЕНО до 50vh */
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Задаем отступ между карточками, чтобы они не были слишком плотно */
+        .card-wrapper {
+            padding-bottom: 2rem; 
         }
 
         /* Анимация при наведении */
@@ -50,68 +59,101 @@
 <body class="p-4 md:p-8">
 
     <header class="text-center mb-12">
-        <h1 class="text-5xl font-extrabold text-gray-900 mb-2 tracking-tight">Интерактивная Витрина Проекта</h1>
+        <h1 class="text-5xl font-extrabold text-gray-900 mb-2 tracking-tight">ЧАТ БОТ</h1>
         <p class="text-xl text-gray-600">Наш подход к решению актуальной задачи.</p>
     </header>
 
-    <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+    <!-- Обертка grid-cols-1 гарантирует, что на мобильных устройствах будет только один столбец -->
+    <main class="grid grid-cols-1 gap-0 max-w-4xl mx-auto">
+        
+        <!-- Обертка для карточек для управления вертикальным отступом -->
+        <div class="card-wrapper">
+            <!-- Секция: Проблема (Задержка 0ms) -->
+            <section id="problem" class="card p-6 rounded-xl border-l-4 color-problem shadow-lg mx-auto" data-delay="0">
+                <h2 class="text-2xl font-bold mb-3 text-red-800">1. Проблема</h2>
+                <p class="text-gray-700 leading-relaxed">
+                   Микробизнесы ежедневно сталкиваются с огромным количеством бумажной работы, которая отнимает драгоценное время и ресурсы:
 
-        <!-- Секция: Проблема (Задержка 0ms) -->
-        <section id="problem" class="card p-6 rounded-xl border-l-4 color-problem shadow-lg" data-delay="0">
-            <h2 class="text-2xl font-bold mb-3 text-red-800">1. Проблема</h2>
-            <p class="text-gray-700 leading-relaxed">
-                Рынок испытывает дефицит персонализированных образовательных траекторий, что приводит к 40% отсеву студентов на первом году обучения в онлайн-школах. Существующие платформы используют шаблонные курсы, игнорируя индивидуальные особенности усвоения материала.
-            </p>
-        </section>
+Генерация и проверка договоров: владельцы бизнеса тратят часы на создание типовых договоров, часто с ошибками или несоответствиями.
 
-        <!-- Секция: Решение (Задержка 200ms) -->
-        <section id="solution" class="card p-6 rounded-xl border-l-4 color-solution shadow-lg" data-delay="200">
-            <h2 class="text-2xl font-bold mb-3 text-emerald-800">2. Решение</h2>
-            <p class="text-gray-700 leading-relaxed">
-                Мы создаем AI-Driven Learning System (ADLS), которая динамически адаптирует контент, тесты и темп обучения в реальном времени, используя LLM для генерации индивидуальных учебных модулей и персонализированной обратной связи.
-            </p>
-        </section>
+Заполнение шаблонов: реквизиты, суммы, сроки нужно вставлять вручную, что увеличивает риск ошибок.
 
-        <!-- Секция: Команда (Задержка 400ms) -->
-        <section id="team" class="card p-6 rounded-xl border-l-4 color-team shadow-lg" data-delay="400">
-            <h2 class="text-2xl font-bold mb-3 text-indigo-800">3. Команда</h2>
-            <ul class="space-y-3 text-sm text-gray-700">
-                <li><strong class="font-semibold">Project Lead (Иван)</strong>: 10 лет в EdTech, Product Management.</li>
-                <li><strong class="font-semibold">AI/ML Engineer (Анна)</strong>: Python, PyTorch, опыт работы с Gemini API и LLM-туннингом.</li>
-                <li><strong class="font-semibold">Full-Stack Dev (Дмитрий)</strong>: React, Node.js, PostgreSQL. Стек: MERN.</li>
-                <li><a href="#" class="text-indigo-600 hover:underline">Профиль Ивана (LinkedIn)</a></li>
-            </ul>
-        </section>
+Хранение и поиск документов: документы теряются, сложно отслеживать историю изменений.
 
-        <!-- Секция: Почему мы (Задержка 600ms) -->
-        <section id="why" class="card p-6 rounded-xl border-l-4 color-why shadow-lg" data-delay="600">
-            <h2 class="text-2xl font-bold mb-3 text-amber-800">4. Почему мы способны</h2>
-            <ul class="list-disc list-inside space-y-2 text-gray-700 leading-relaxed pl-2">
-                <li>Опыт создания и масштабирования B2C EdTech продуктов.</li>
-                <li>Уникальная комбинация навыков (AI-инженерия + глубокое знание педагогики).</li>
-                <li>Готовая интеграция с API больших языковых моделей.</li>
-            </ul>
-        </section>
+Форматы и экспорт: необходимость вручную формировать PDF, Excel, Word для клиентов и партнёров.
 
-        <!-- Секция: Дорожная карта (Задержка 800ms) -->
-        <section id="roadmap" class="card p-6 rounded-xl border-l-4 color-roadmap shadow-lg" data-delay="800">
-            <h2 class="text-2xl font-bold mb-3 text-cyan-800">5. Дорожная карта</h2>
-            <div class="space-y-3 text-gray-700">
-                <p><strong class="font-semibold text-cyan-700">Q4: Idea / Prototype</strong>: Сбор требований, архитектура, демо-MVP на 10 пользователях.</p>
-                <p><strong class="font-semibold text-cyan-700">Q1: MVP (Beta)</strong>: Запуск на 100 платных пользователях, интеграция с платежами, базовая LLM-адаптация.</p>
-                <p><strong class="font-semibold text-cyan-700">Q2: Launched</strong>: Полный запуск, масштабирование базы пользователей, внедрение системы A/B тестирования.</p>
-            </div>
-        </section>
+Последствия:
 
-        <!-- Секция: Реализация (Задержка 1000ms) -->
-        <section id="implementation" class="card p-6 rounded-xl border-l-4 color-implementation shadow-lg" data-delay="1000">
-            <h2 class="text-2xl font-bold mb-3 text-purple-800">6. Реализация</h2>
-            <ul class="list-disc list-inside space-y-2 text-gray-700 leading-relaxed pl-2">
-                <li><strong class="font-semibold">Этапы</strong>: Разработка Core API, интеграция с Gemini, UI/UX (React), тестирование.</li>
-                <li><strong class="font-semibold">Технологии</strong>: React/Tailwind (Frontend), Node.js (Backend), PostgreSQL (DB).</li>
-                <li><strong class="font-semibold">ИИ-инструменты</strong>: Gemini 2.5 Pro для генерации контента и оценки, Gemini API для адаптации учебного плана.</li>
-            </ul>
-        </section>
+Потеря времени и продуктивности.
+
+Ошибки в документах → финансовые и юридические риски.
+
+Сложности с управлением и отслеживанием документооборота.
+
+Вывод:
+Малый бизнес нуждается в умном инструменте, который автоматизирует большую часть бюрократии, уменьшает ошибки и позволяет предпринимателям сосредоточиться на развитии бизнеса.
+                </p>
+            </section>
+        </div>
+
+        <div class="card-wrapper">
+            <!-- Секция: Решение (Задержка 200ms) -->
+            <section id="solution" class="card p-6 rounded-xl border-l-4 color-solution shadow-lg mx-auto" data-delay="200">
+                <h2 class="text-2xl font-bold mb-3 text-emerald-800">2. Решение</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    Мы создаем AI-Driven Learning System (ADLS), которая динамически адаптирует контент, тесты и темп обучения в реальном времени, используя LLM для генерации индивидуальных учебных модулей и персонализированной обратной связи.
+                </p>
+            </section>
+        </div>
+
+        <div class="card-wrapper">
+            <!-- Секция: Команда (Задержка 400ms) -->
+            <section id="team" class="card p-6 rounded-xl border-l-4 color-team shadow-lg mx-auto" data-delay="400">
+                <h2 class="text-2xl font-bold mb-3 text-indigo-800">3. Команда</h2>
+                <ul class="space-y-3 text-sm text-gray-700">
+                    <li><strong class="font-semibold">Project Lead (Иван)</strong>: 10 лет в EdTech, Product Management.</li>
+                    <li><strong class="font-semibold">AI/ML Engineer (Анна)</strong>: Python, PyTorch, опыт работы с Gemini API и LLM-туннингом.</li>
+                    <li><strong class="font-semibold">Full-Stack Dev (Дмитрий)</strong>: React, Node.js, PostgreSQL. Стек: MERN.</li>
+                    <li><a href="#" class="text-indigo-600 hover:underline">Профиль Ивана (LinkedIn)</a></li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="card-wrapper">
+            <!-- Секция: Почему мы (Задержка 600ms) -->
+            <section id="why" class="card p-6 rounded-xl border-l-4 color-why shadow-lg mx-auto" data-delay="600">
+                <h2 class="text-2xl font-bold mb-3 text-amber-800">4. Почему мы способны</h2>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 leading-relaxed pl-2">
+                    <li>Опыт создания и масштабирования B2C EdTech продуктов.</li>
+                    <li>Уникальная комбинация навыков (AI-инженерия + глубокое знание педагогики).</li>
+                    <li>Готовая интеграция с API больших языковых моделей.</li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="card-wrapper">
+            <!-- Секция: Дорожная карта (Задержка 800ms) -->
+            <section id="roadmap" class="card p-6 rounded-xl border-l-4 color-roadmap shadow-lg mx-auto" data-delay="800">
+                <h2 class="text-2xl font-bold mb-3 text-cyan-800">5. Дорожная карта</h2>
+                <div class="space-y-3 text-gray-700">
+                    <p><strong class="font-semibold text-cyan-700">Q4: Idea / Prototype</strong>: Сбор требований, архитектура, демо-MVP на 10 пользователях.</p>
+                    <p><strong class="font-semibold text-cyan-700">Q1: MVP (Beta)</strong>: Запуск на 100 платных пользователях, интеграция с платежами, базовая LLM-адаптация.</p>
+                    <p><strong class="font-semibold text-cyan-700">Q2: Launched</strong>: Полный запуск, масштабирование базы пользователей, внедрение системы A/B тестирования.</p>
+                </div>
+            </section>
+        </div>
+
+        <div class="card-wrapper">
+            <!-- Секция: Реализация (Задержка 1000ms) -->
+            <section id="implementation" class="card p-6 rounded-xl border-l-4 color-implementation shadow-lg mx-auto" data-delay="1000">
+                <h2 class="text-2xl font-bold mb-3 text-purple-800">6. Реализация</h2>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 leading-relaxed pl-2">
+                    <li><strong class="font-semibold">Этапы</strong>: Разработка Core API, интеграция с Gemini, UI/UX (React), тестирование.</li>
+                    <li><strong class="font-semibold">Технологии</strong>: React/Tailwind (Frontend), Node.js (Backend), PostgreSQL (DB).</li>
+                    <li><strong class="font-semibold">ИИ-инструменты</strong>: Gemini 2.5 Pro для генерации контента и оценки, Gemini API для адаптации учебного плана.</li>
+                </ul>
+            </section>
+        </div>
 
     </main>
 
@@ -120,6 +162,8 @@
             const cards = document.querySelectorAll('.card');
             
             // Запуск анимации при прокрутке
+            // Устанавливаем threshold: 1.0, чтобы карточка появлялась, только когда она полностью видна
+            // margin: '0px 0px -20% 0px' создает "буфер" снизу, чтобы карточка начинала наблюдаться до того, как появится в самом низу экрана.
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -136,8 +180,10 @@
                     }
                 });
             }, {
-                // Карточка должна быть видна хотя бы на 10%
-                threshold: 0.1
+                // Карточка должна быть видна хотя бы на 80% (для лучшего ощущения)
+                threshold: 0.8,
+                // Добавляем отступ снизу, чтобы запуск происходил более плавно при прокрутке
+                rootMargin: '0px 0px -20% 0px' 
             });
 
             // Начинаем наблюдение за каждой карточкой
