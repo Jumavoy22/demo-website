@@ -1,72 +1,150 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Demo WebSite</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f5; }
-    header { background: #222; color: #fff; padding: 20px; text-align: center; }
-    section { padding: 30px; max-width: 900px; margin: auto; background: #fff; margin-top:20px; border-radius:12px; }
-    h2 { color: #333; }
-    .roadmap-step { margin: 10px 0; padding: 10px; border-left: 4px solid #444; background: #f0f0f0; }
-    ul { line-height: 1.6; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Project Showcase - Витрина Проекта</title>
+    <!-- Подключение Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Настройка шрифта Inter для красоты */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fc;
+            min-height: 100vh;
+        }
+
+        /* Общие стили для карточек */
+        .card {
+            /* Базовые стили для интерактивной карточки */
+            transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.5s, background-color 0.5s;
+            cursor: pointer;
+            will-change: transform;
+            opacity: 0; /* Изначально скрыты для анимации появления */
+            transform: translateY(20px);
+        }
+
+        /* Анимация при наведении */
+        .card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            z-index: 10;
+        }
+
+        /* Класс для анимации появления */
+        .card.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Цвета для секций */
+        .color-problem { @apply bg-red-100 hover:bg-red-200 border-red-500; }
+        .color-solution { @apply bg-emerald-100 hover:bg-emerald-200 border-emerald-500; }
+        .color-team { @apply bg-indigo-100 hover:bg-indigo-200 border-indigo-500; }
+        .color-why { @apply bg-amber-100 hover:bg-amber-200 border-amber-500; }
+        .color-roadmap { @apply bg-cyan-100 hover:bg-cyan-200 border-cyan-500; }
+        .color-implementation { @apply bg-purple-100 hover:bg-purple-200 border-purple-500; }
+    </style>
 </head>
-<body>
-  <header>
-    <h1>Demo Startup Website</h1>
-  </header>
+<body class="p-4 md:p-8">
 
-  <section>
-    <h2>1. Проблема → Решение</h2>
-    <p><strong>Проблема:</strong> Пользователи сталкиваются с отсутствием удобного инструмента для быстрой демонстрации проектов и концепций.</p>
-    <p><strong>Решение:</strong> Создать простой онлайн‑демо сайт, который можно развернуть за минуты и показать заказчику, инвестору или команде.</p>
-  </section>
+    <header class="text-center mb-12">
+        <h1 class="text-5xl font-extrabold text-gray-900 mb-2 tracking-tight">Интерактивная Витрина Проекта</h1>
+        <p class="text-xl text-gray-600">Наш подход к решению актуальной задачи.</p>
+    </header>
 
-  <section>
-    <h2>2. Команда</h2>
-    <ul>
-      <li><strong>Team Lead / Architect</strong> — системное проектирование, архитектура, управление проектом</li>
-      <li><strong>Data Scientist</strong> — ML модели, анализ данных, Python, Jupyter</li>
-      <li><strong>Frontend Developer</strong> — HTML, CSS, JS, React</li>
-      <li><strong>Backend Developer</strong> — Node.js / Python / FastAPI / Express</li>
-      <li><strong>DevOps</strong> — Docker, CI/CD, деплой</li>
-    </ul>
-    <p><strong>Стек:</strong> JS, Python, FastAPI, React, Postgres, Docker, OpenAI API.</p>
-    <p><strong>Ссылки:</strong> GitHub, LinkedIn, Portfolio.</p>
-  </section>
+    <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
 
-  <section>
-    <h2>3. Почему наша команда способна решить задачу</h2>
-    <ul>
-      <li>Опыт разработки коммерческих проектов</li>
-      <li>Глубокие знания в ML, DevOps и архитектуре</li>
-      <li>Умение внедрять ИИ‑решения</li>
-      <li>Быстрое прототипирование</li>
-    </ul>
-  </section>
+        <!-- Секция: Проблема (Задержка 0ms) -->
+        <section id="problem" class="card p-6 rounded-xl border-l-4 color-problem shadow-lg" data-delay="0">
+            <h2 class="text-2xl font-bold mb-3 text-red-800">1. Проблема</h2>
+            <p class="text-gray-700 leading-relaxed">
+                Рынок испытывает дефицит персонализированных образовательных траекторий, что приводит к 40% отсеву студентов на первом году обучения в онлайн-школах. Существующие платформы используют шаблонные курсы, игнорируя индивидуальные особенности усвоения материала.
+            </p>
+        </section>
 
-  <section>
-    <h2>4. Дорожная карта</h2>
-    <div class="roadmap-step"><strong>Idea:</strong> Формирование концепции и требований</div>
-    <div class="roadmap-step"><strong>Prototype:</strong> Создание рабочей демо‑версии</div>
-    <div class="roadmap-step"><strong>MVP:</strong> Реализация ключевых функций</div>
-    <div class="roadmap-step"><strong>Launched:</strong> Деплой и запуск</div>
-  </section>
+        <!-- Секция: Решение (Задержка 200ms) -->
+        <section id="solution" class="card p-6 rounded-xl border-l-4 color-solution shadow-lg" data-delay="200">
+            <h2 class="text-2xl font-bold mb-3 text-emerald-800">2. Решение</h2>
+            <p class="text-gray-700 leading-relaxed">
+                Мы создаем AI-Driven Learning System (ADLS), которая динамически адаптирует контент, тесты и темп обучения в реальном времени, используя LLM для генерации индивидуальных учебных модулей и персонализированной обратной связи.
+            </p>
+        </section>
 
-  <section>
-    <h2>5. План реализации</h2>
-    <ul>
-      <li>Сбор требований и анализ</li>
-      <li>Создание архитектуры решения</li>
-      <li>Разработка Frontend + Backend</li>
-      <li>Интеграция ИИ‑инструментов</li>
-      <li>Тестирование</li>
-      <li>Деплой (Vercel / Netlify / Render)</li>
-    </ul>
-    <p><strong>ИИ‑инструменты:</strong> OpenAI API, LLM‑модели, автогенерация контента, код‑генерация.</p>
-  </section>
+        <!-- Секция: Команда (Задержка 400ms) -->
+        <section id="team" class="card p-6 rounded-xl border-l-4 color-team shadow-lg" data-delay="400">
+            <h2 class="text-2xl font-bold mb-3 text-indigo-800">3. Команда</h2>
+            <ul class="space-y-3 text-sm text-gray-700">
+                <li><strong class="font-semibold">Project Lead (Иван)</strong>: 10 лет в EdTech, Product Management.</li>
+                <li><strong class="font-semibold">AI/ML Engineer (Анна)</strong>: Python, PyTorch, опыт работы с Gemini API и LLM-туннингом.</li>
+                <li><strong class="font-semibold">Full-Stack Dev (Дмитрий)</strong>: React, Node.js, PostgreSQL. Стек: MERN.</li>
+                <li><a href="#" class="text-indigo-600 hover:underline">Профиль Ивана (LinkedIn)</a></li>
+            </ul>
+        </section>
 
+        <!-- Секция: Почему мы (Задержка 600ms) -->
+        <section id="why" class="card p-6 rounded-xl border-l-4 color-why shadow-lg" data-delay="600">
+            <h2 class="text-2xl font-bold mb-3 text-amber-800">4. Почему мы способны</h2>
+            <ul class="list-disc list-inside space-y-2 text-gray-700 leading-relaxed pl-2">
+                <li>Опыт создания и масштабирования B2C EdTech продуктов.</li>
+                <li>Уникальная комбинация навыков (AI-инженерия + глубокое знание педагогики).</li>
+                <li>Готовая интеграция с API больших языковых моделей.</li>
+            </ul>
+        </section>
+
+        <!-- Секция: Дорожная карта (Задержка 800ms) -->
+        <section id="roadmap" class="card p-6 rounded-xl border-l-4 color-roadmap shadow-lg" data-delay="800">
+            <h2 class="text-2xl font-bold mb-3 text-cyan-800">5. Дорожная карта</h2>
+            <div class="space-y-3 text-gray-700">
+                <p><strong class="font-semibold text-cyan-700">Q4: Idea / Prototype</strong>: Сбор требований, архитектура, демо-MVP на 10 пользователях.</p>
+                <p><strong class="font-semibold text-cyan-700">Q1: MVP (Beta)</strong>: Запуск на 100 платных пользователях, интеграция с платежами, базовая LLM-адаптация.</p>
+                <p><strong class="font-semibold text-cyan-700">Q2: Launched</strong>: Полный запуск, масштабирование базы пользователей, внедрение системы A/B тестирования.</p>
+            </div>
+        </section>
+
+        <!-- Секция: Реализация (Задержка 1000ms) -->
+        <section id="implementation" class="card p-6 rounded-xl border-l-4 color-implementation shadow-lg" data-delay="1000">
+            <h2 class="text-2xl font-bold mb-3 text-purple-800">6. Реализация</h2>
+            <ul class="list-disc list-inside space-y-2 text-gray-700 leading-relaxed pl-2">
+                <li><strong class="font-semibold">Этапы</strong>: Разработка Core API, интеграция с Gemini, UI/UX (React), тестирование.</li>
+                <li><strong class="font-semibold">Технологии</strong>: React/Tailwind (Frontend), Node.js (Backend), PostgreSQL (DB).</li>
+                <li><strong class="font-semibold">ИИ-инструменты</strong>: Gemini 2.5 Pro для генерации контента и оценки, Gemini API для адаптации учебного плана.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.card');
+            
+            // Запуск анимации при прокрутке
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const card = entry.target;
+                        const delay = parseInt(card.getAttribute('data-delay'));
+                        
+                        // Задержка перед добавлением класса, чтобы создать эффект последовательного появления
+                        setTimeout(() => {
+                            card.classList.add('is-visible');
+                        }, delay);
+                        
+                        // Прекращаем наблюдение, как только блок появился
+                        observer.unobserve(card);
+                    }
+                });
+            }, {
+                // Карточка должна быть видна хотя бы на 10%
+                threshold: 0.1
+            });
+
+            // Начинаем наблюдение за каждой карточкой
+            cards.forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
 </body>
 </html>
