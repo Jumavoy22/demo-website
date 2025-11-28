@@ -151,10 +151,43 @@
             <!-- Секция: Дорожная карта (Задержка 800ms) -->
             <section id="roadmap" class="card p-6 rounded-xl border-l-4 color-roadmap shadow-lg mx-auto" data-delay="800">
                 <h2 class="text-2xl font-bold mb-3 text-cyan-800">5. Дорожная карта</h2>
-                <div class="space-y-3 text-gray-700">
-                    <p><strong class="font-semibold text-cyan-700">Q4: Idea / Prototype</strong>: Сбор требований, архитектура, демо-MVP на 10 пользователях.</p>
-                    <p><strong class="font-semibold text-cyan-700">Q1: MVP (Beta)</strong>: Запуск на 100 платных пользователях, интеграция с платежами, базовая LLM-адаптация.</p>
-                    <p><strong class="font-semibold text-cyan-700">Q2: Launched</strong>: Полный запуск, масштабирование базы пользователей, внедрение системы A/B тестирования.</p>
+                <!-- ОБНОВЛЕННЫЙ ТЕКСТ ROADMAP -->
+                <div class="space-y-4 text-gray-700 text-sm">
+                    <div>
+                        <h3 class="font-bold text-cyan-900 text-base">1. Idea → Prototype</h3>
+                        <ul class="list-disc list-inside pl-2">
+                            <li>Определение функционала</li>
+                            <li>Архитектура (Azure + CRM + RAG)</li>
+                            <li>Быстрый чат-прототип с генерацией 1–2 документов</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-cyan-900 text-base">2. MVP</h3>
+                        <ul class="list-disc list-inside pl-2">
+                            <li>Генерация договоров/шаблонов</li>
+                            <li>Проверка документов</li>
+                            <li>Интеграция с CRM (реквизиты, сохранение)</li>
+                            <li>PDF/Word/Excel экспорт</li>
+                            <li>История документов</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-cyan-900 text-base">3. Production</h3>
+                        <ul class="list-disc list-inside pl-2">
+                            <li>Кастомные шаблоны</li>
+                            <li>Улучшенная проверка документов</li>
+                            <li>Роли пользователей + безопасность (Azure AD)</li>
+                            <li>Web-панель управления</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-cyan-900 text-base">4. Launched</h3>
+                        <ul class="list-disc list-inside pl-2">
+                            <li>CI/CD (Azure DevOps)</li>
+                            <li>Мониторинг и логирование</li>
+                            <li>Масштабирование и поддержка</li>
+                        </ul>
+                    </div>
                 </div>
             </section>
         </div>
@@ -163,11 +196,61 @@
             <!-- Секция: Реализация (Задержка 1000ms) -->
             <section id="implementation" class="card p-6 rounded-xl border-l-4 color-implementation shadow-lg mx-auto" data-delay="1000">
                 <h2 class="text-2xl font-bold mb-3 text-purple-800">6. Реализация</h2>
-                <ul class="list-disc list-inside space-y-2 text-gray-700 leading-relaxed pl-2">
-                    <li><strong class="font-semibold">Этапы</strong>: Разработка Core API, интеграция с Gemini, UI/UX (React), тестирование.</li>
-                    <li><strong class="font-semibold">Технологии</strong>: React/Tailwind (Frontend), Node.js (Backend), PostgreSQL (DB).</li>
-                    <li><strong class="font-semibold">ИИ-инструменты</strong>: Gemini 2.5 Pro для генерации контента и оценки, Gemini API для адаптации учебного плана.</li>
-                </ul>
+                <!-- ОБНОВЛЕННЫЙ ТЕКСТ РЕАЛИЗАЦИИ -->
+                <div class="space-y-4 text-gray-700 text-sm">
+                    <div>
+                        <h3 class="font-bold text-purple-900 text-base">1. Развёртывание инфраструктуры</h3>
+                        <ul class="list-disc list-inside pl-2">
+                            <li>Настройка Azure OpenAI, Azure Functions, Blob Storage</li>
+                            <li>Подключение CRM (API/вебхуки)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-purple-900 text-base">2. Разработка backend-логики</h3>
+                        <ul class="list-disc list-inside pl-2">
+                            <li>Генерация документов</li>
+                            <li>Проверка и анализ файлов</li>
+                            <li>Автозаполнение шаблонов</li>
+                            <li>История и хранение документов</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-purple-900 text-base">3. Интеграция Copilot-бота</h3>
+                        <ul class="list-disc list-inside pl-2">
+                            <li>Подключение чат-бота (Telegram/Web/WhatsApp)</li>
+                            <li>Команды: создать, проверить, заполнить, найти документ</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-purple-900 text-base">4. Генерация форматов</h3>
+                        <ul class="list-disc list-inside pl-2">
+                            <li>Экспорт PDF / Word / Excel</li>
+                            <li>Загрузка и обработка пользовательских файлов</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-purple-900 text-base">5. RAG + база знаний</h3>
+                        <ul class="list-disc list-inside pl-2">
+                            <li>Индексация шаблонов и документов</li>
+                            <li>Контекстная генерация договоров под микробизнес</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-purple-900 text-base">6. UI/панель</h3>
+                        <ul class="list-disc list-inside pl-2">
+                            <li>Мини-панель с историей документов</li>
+                            <li>Просмотр, скачивание, версии</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-purple-900 text-base">7. Тестирование и релиз</h3>
+                        <ul class="list-disc list-inside pl-2">
+                            <li>Безопасность (Azure AD)</li>
+                            <li>Тестирование</li>
+                            <li>Деплой и мониторинг</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
         </div>
 
