@@ -24,7 +24,7 @@
             opacity: 0; /* Изначально скрыты для анимации появления */
             transform: translateY(20px);
             /* Устанавливаем минимальную высоту, чтобы карточки не помещались на экране сразу */
-            min-height: 50vh; /* УВЕЛИЧЕНО до 50vh */
+            min-height: 50vh; 
             display: flex;
             flex-direction: column;
         }
@@ -59,7 +59,6 @@
 <body class="p-4 md:p-8">
 
     <header class="text-center mb-12">
-        <!-- ОБНОВЛЕННЫЙ ЗАГОЛОВОК -->
         <h1 class="text-5xl font-extrabold text-gray-900 mb-2 tracking-tight">Copilot чат бот</h1>
         <p class="text-xl text-gray-600">Наш подход к решению актуальной задачи.</p>
     </header>
@@ -69,10 +68,9 @@
         
         <!-- Обертка для карточек для управления вертикальным отступом -->
         <div class="card-wrapper">
-            <!-- Секция: Проблема (Задержка 0ms) -->
-            <section id="problem" class="card p-6 rounded-xl border-l-4 color-problem shadow-lg mx-auto" data-delay="0">
+            <!-- Секция: Проблема -->
+            <section id="problem" class="card p-6 rounded-xl border-l-4 color-problem shadow-lg mx-auto">
                 <h2 class="text-2xl font-bold mb-3 text-red-800">1. Проблема</h2>
-                <!-- ОБНОВЛЕННЫЙ ТЕКСТ ПРОБЛЕМЫ -->
                 <div class="text-gray-700 leading-relaxed space-y-4">
                     <p class="font-semibold">Микробизнесы ежедневно сталкиваются с огромным количеством бумажной работы, которая отнимает драгоценное время и ресурсы:</p>
                     <ul class="list-disc list-inside space-y-2 pl-4">
@@ -97,10 +95,9 @@
         </div>
 
         <div class="card-wrapper">
-            <!-- Секция: Решение (Задержка 200ms) -->
-            <section id="solution" class="card p-6 rounded-xl border-l-4 color-solution shadow-lg mx-auto" data-delay="200">
+            <!-- Секция: Решение -->
+            <section id="solution" class="card p-6 rounded-xl border-l-4 color-solution shadow-lg mx-auto">
                 <h2 class="text-2xl font-bold mb-3 text-emerald-800">2. Решение</h2>
-                <!-- ОБНОВЛЕННЫЙ ТЕКСТ РЕШЕНИЯ -->
                 <div class="text-gray-700 leading-relaxed space-y-4">
                     <p class="font-semibold">Мы создаём интерактивного Copilot-ассистента по документообороту — чат-бота, который автоматизирует большинство бюрократических задач для микробизнеса:</p>
                     <ul class="list-disc list-inside space-y-2 pl-4">
@@ -122,10 +119,9 @@
         </div>
 
         <div class="card-wrapper">
-            <!-- Секция: Команда (Задержка 400ms) -->
-            <section id="team" class="card p-6 rounded-xl border-l-4 color-team shadow-lg mx-auto" data-delay="400">
+            <!-- Секция: Команда -->
+            <section id="team" class="card p-6 rounded-xl border-l-4 color-team shadow-lg mx-auto">
                 <h2 class="text-2xl font-bold mb-3 text-indigo-800">3. Команда</h2>
-                <!-- ОБНОВЛЕННЫЙ СОСТАВ КОМАНДЫ -->
                 <ul class="space-y-3 text-sm text-gray-700">
                     <li><strong class="font-semibold">Team Lead</strong>: Азизхон Ишанханов (Senior Backend Developer, EPAM).</li>
                     <li><strong class="font-semibold">Full Stack Developer</strong>: Махмуд Хамдамов.</li>
@@ -134,10 +130,9 @@
         </div>
 
         <div class="card-wrapper">
-            <!-- Секция: Почему мы (Задержка 600ms) -->
-            <section id="why" class="card p-6 rounded-xl border-l-4 color-why shadow-lg mx-auto" data-delay="600">
+            <!-- Секция: Почему мы -->
+            <section id="why" class="card p-6 rounded-xl border-l-4 color-why shadow-lg mx-auto">
                 <h2 class="text-2xl font-bold mb-3 text-amber-800">4. Почему мы способны</h2>
-                <!-- ОБНОВЛЕННЫЙ ТЕКСТ ПОЧЕМУ МЫ -->
                 <ul class="list-disc list-inside space-y-3 text-gray-700 leading-relaxed pl-2">
                     <li>Мы комбинируем глубокие инженерные навыки и практическое знание нейросетей, что позволяет нам не просто сделать чат-бота, а построить полноценного Copilot-ассистента.</li>
                     <li>Понимаем, как работает документооборот в малом бизнесе, какие процессы можно автоматизировать и как повысить удобство пользователей.</li>
@@ -148,10 +143,9 @@
         </div>
 
         <div class="card-wrapper">
-            <!-- Секция: Дорожная карта (Задержка 800ms) -->
-            <section id="roadmap" class="card p-6 rounded-xl border-l-4 color-roadmap shadow-lg mx-auto" data-delay="800">
+            <!-- Секция: Дорожная карта -->
+            <section id="roadmap" class="card p-6 rounded-xl border-l-4 color-roadmap shadow-lg mx-auto">
                 <h2 class="text-2xl font-bold mb-3 text-cyan-800">5. Дорожная карта</h2>
-                <!-- ОБНОВЛЕННЫЙ ТЕКСТ ROADMAP -->
                 <div class="space-y-4 text-gray-700 text-sm">
                     <div>
                         <h3 class="font-bold text-cyan-900 text-base">1. Idea → Prototype</h3>
@@ -193,10 +187,9 @@
         </div>
 
         <div class="card-wrapper">
-            <!-- Секция: Реализация (Задержка 1000ms) -->
-            <section id="implementation" class="card p-6 rounded-xl border-l-4 color-implementation shadow-lg mx-auto" data-delay="1000">
+            <!-- Секция: Реализация -->
+            <section id="implementation" class="card p-6 rounded-xl border-l-4 color-implementation shadow-lg mx-auto">
                 <h2 class="text-2xl font-bold mb-3 text-purple-800">6. Реализация</h2>
-                <!-- ОБНОВЛЕННЫЙ ТЕКСТ РЕАЛИЗАЦИИ -->
                 <div class="space-y-4 text-gray-700 text-sm">
                     <div>
                         <h3 class="font-bold text-purple-900 text-base">1. Развёртывание инфраструктуры</h3>
@@ -260,32 +253,23 @@
         document.addEventListener('DOMContentLoaded', () => {
             const cards = document.querySelectorAll('.card');
             
-            // Запуск анимации при прокрутке
-            // Устанавливаем threshold: 1.0, чтобы карточка появлялась, только когда она полностью видна
-            // margin: '0px 0px -20% 0px' создает "буфер" снизу, чтобы карточка начинала наблюдаться до того, как появится в самом низу экрана.
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         const card = entry.target;
-                        const delay = parseInt(card.getAttribute('data-delay'));
                         
-                        // Задержка перед добавлением класса, чтобы создать эффект последовательного появления
-                        setTimeout(() => {
-                            card.classList.add('is-visible');
-                        }, delay);
+                        // Мгновенное появление без setTimeout
+                        card.classList.add('is-visible');
                         
-                        // Прекращаем наблюдение, как только блок появился
                         observer.unobserve(card);
                     }
                 });
             }, {
-                // Карточка должна быть видна хотя бы на 80% (для лучшего ощущения)
-                threshold: 0.8,
-                // Добавляем отступ снизу, чтобы запуск происходил более плавно при прокрутке
-                rootMargin: '0px 0px -20% 0px' 
+                // Понизили порог до 10%, чтобы блок появлялся сразу, как только край станет виден
+                threshold: 0.1, 
+                rootMargin: '0px 0px -10% 0px' 
             });
 
-            // Начинаем наблюдение за каждой карточкой
             cards.forEach(card => {
                 observer.observe(card);
             });
